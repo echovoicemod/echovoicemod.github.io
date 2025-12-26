@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EchoVoice – Fabric Voice Chat Mod</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --green: #3ddc84;
+    --dark: #020617;
+    --card: rgba(30, 41, 59, 0.85);
+    --text: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background:
+        linear-gradient(rgba(2,6,23,.85), rgba(2,6,23,.95)),
+        url("https://i.pinimg.com/736x/b4/98/ab/b498ab2bce098940cc1fe7664ce5c482.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text);
+}
+
+header {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--green);
+    text-shadow: 0 0 20px rgba(61,220,132,.4);
+    animation: fadeUp 1s ease;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1rem;
+    opacity: .9;
+    animation: fadeUp 1.2s ease;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: var(--card);
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    animation: float 4s ease-in-out infinite;
+}
+
+.stat strong {
+    font-size: 1.3rem;
+    color: var(--green);
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 28px;
+    background: var(--green);
+    color: #022c22;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(61,220,132,.5);
+}
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 50px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #334155;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: var(--green);
+    box-shadow: 0 0 30px rgba(61,220,132,.25);
+}
+
+.card h3 {
+    color: var(--green);
+    margin-bottom: 8px;
+}
+
+.download-box {
+    max-width: 600px;
+    margin: auto;
+    background: var(--card);
+    padding: 35px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.download-box p {
+    margin-bottom: 20px;
+    opacity: .9;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    opacity: .6;
+    font-size: .85rem;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes float {
+    0%,100% {transform:translateY(0);}
+    50% {transform:translateY(-6px);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero">
+        <h1>EchoVoice</h1>
+        <p>Next-gen proximity voice chat mod for Minecraft. Fabric support with ultra-low latency and crystal-clear audio.</p>
+
+        <div class="stats">
+            <div class="stat"><strong>5,000+</strong><br>Users</div>
+            <div class="stat"><strong>1.21.1</strong><br>Fabric</div>
+            <div class="stat"><strong>Spigot</strong><br>Server Support</div>
+        </div>
+
+        <a href="#download" class="btn">Download for Fabric</a>
+    </div>
+</header>
+
+<section id="features">
+    <h2 class="section-title">Features</h2>
+
+    <div class="features">
+        <div class="card"><h3>🔊 Proximity Voice</h3><p>Volume changes based on player distance.</p></div>
+        <div class="card"><h3>🎧 3D Audio</h3><p>Hear players from left or right depending on their position.</p></div>
+        <div class="card"><h3>⚡ Low Latency</h3><p>Optimized audio engine for smooth gameplay.</p></div>
+        <div class="card"><h3>🔐 Encrypted</h3><p>All voice data is fully encrypted for safety.</p></div>
+        <div class="card"><h3>🧩 Modpack Friendly</h3><p>Works seamlessly in large modpacks.</p></div>
+        <div class="card"><h3>🖥 Server Support</h3><p>Supports Fabric client + Spigot/Paper servers.</p></div>
+    </div>
+</section>
+
+<section id="download">
+    <h2 class="section-title">Download</h2>
+
+    <div class="download-box">
+        <p>EchoVoice is only available for <strong>Fabric</strong> on Minecraft <strong>1.21.1</strong>.</p>
+        <a href="https://www.dropbox.com/scl/fi/06ve1fokmpiluqsns1rmt/EchoVoiceBeta-1.0-SNAPSHOT.jar?rlkey=d19u4docz0rjhl1ap4znx2nvv&st=7sch0anl&dl=1" class="btn">Download EchoVoice 1.21.1 for Fabric</a>
+        <p style="font-size:.8rem; opacity:.6;">Not affiliated with Mojang or Microsoft.</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 EchoVoice Mod – 5,000+ users worldwide
+</footer>
+
+</body>
+</html>
